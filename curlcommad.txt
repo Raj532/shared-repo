@@ -1,3 +1,7 @@
+
+$ celery multi start w1 -A proj -l info --pidfile=/var/run/celery/%n.pid --logfile=/var/log/celery/%n%I.log
+
+
 root@0d689d7a6014 elasticsearch]# curl -XGET 'localhost:9200/_search?pretty' -H 'Content-Type:application/json'  -d '{"aggs": { "sum_age": {"min" : {"field": "age"} } } }'|tee output3.txt
 
 curl -XPUT 'localhost:9200/my_experimental_index?pretty' -H 'Content-Type: application/json' -d'
