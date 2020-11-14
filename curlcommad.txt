@@ -88,7 +88,7 @@ curl -XPOST "http://localhost:9200/universe/planets/1" -H 'content-Type: applica
    ]
 }'
 
-curl -XGET localhost:9200/universe/planets/_search?pretty -d '
+curl -XGET localhost:9200/universe/planets/_search?pretty -H 'content-Type: application/json' -d '
 {
   "query": { 
          "nested": {
