@@ -39,10 +39,10 @@ GET /_search
 
 curl -XGET 'localhost:9200/_search?pretty' -H 'Content-Type: application/json' -d'{
     "bool": {
-        "must":     { "match": { "firstname": "john" }},
-        "must_not": { "match": { "lastname":   "bieber" }},
+        "must":     { "match": { "firstname": "Rose" }},
+        "must_not": { "match": { "lastname":   "Carlson" }},
         "should": [
-            { "match": { "lastname": "albert" }}
+            { "match": { "lastname": "Combs" }}
         ],
         "filter": {
           "range": { "balance": { "gte": "20000" }} 
