@@ -49,7 +49,7 @@ curl -XGET 'localhost:9200/_search?pretty' -H 'Content-Type: application/json' -
           "range": { "balance": { "gte": "20000" }} 
         }
   } 
-}'
+}}'
 
 
 curl -H 'Content-Type: appliaction/json' -XPUT "http://localhost:9200/universe/" -d'
