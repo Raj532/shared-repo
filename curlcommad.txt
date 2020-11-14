@@ -1,3 +1,5 @@
+AA - https://coderdestination.blogspot.com/2019/02/automation-anywhere-rpa-mcq-quiz-part-2.html
+
 
 $ celery multi start w1 -A proj -l info --pidfile=/var/run/celery/%n.pid --logfile=/var/log/celery/%n%I.log
 
