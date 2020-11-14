@@ -1,0 +1,50 @@
+curl -XPUT 'localhost:9200/my_experimental_index?pretty' -H 'Content-Type: application/json' -d'
+
+{
+  "mappings": {
+    "my_type": {
+      "properties": {
+        "full_name": {
+          "type":  "integer"
+        } } } } } '
+
+curl -XGET 'localhost:9200/my_experimental_index/_mapping?pretty'
+curl -XGET 'localhost:9200/bank/_mapping?pretty'
+
+curl -XGET "localhost:9200/_search?q=lastname:perkins&pretty"
+curl -XGET 'localhost:9200/bank/_search?q=employer:perkins&pretty'
+
+
+GET /_search
+{
+    "query": query_clause
+}
+
+{
+    QUERY_NAME: {
+        ARGUMENT: VALUE,
+        ARGUMENT: VALUE,...
+    }
+}
+
+{
+    QUERY_NAME: {
+        FIELD_NAME: {
+            ARGUMENT: VALUE,
+            ARGUMENT: VALUE,...
+        }
+    }
+}
+
+
+curl -XGET 'localhost:9200/_search?pretty' -H 'Content-Type: application/json' -d'{
+    "bool": {
+        "must":     { "match": { "firstname": "john" }},
+        "must_not": { "match": { "lastname":   "bieber" }},
+        "should": [
+            { "match": { "lastname": "albert" }}
+        ],
+        "filter": {
+          "range": { "balance": { "gte": "20000" }} 
+        }
+} 
