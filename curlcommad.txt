@@ -68,3 +68,22 @@ curl -H 'Content-Type: appliaction/json' -XPUT "http://localhost:9200/universe/"
     }
   }
 }'
+
+curl -XPOST "http://localhost:9200/universe/planets/" -d'
+{
+   "mission": "accomplish",
+   "comments": [
+      {
+         "name": "earth",
+         "size": 2
+      },
+      {
+         "name": "mars",
+         "size": 1 
+      },
+      {
+         "name": "jupiter",
+         "size": 3 
+      }
+   ]
+}'
