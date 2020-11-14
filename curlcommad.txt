@@ -87,3 +87,29 @@ curl -XPOST "http://localhost:9200/universe/planets/1" -H 'content-Type: applica
       }
    ]
 }'
+
+curl -XGET localhost:9200/universe/planets/_search?pretty -d '
+{
+  "query": { 
+         "nested": {
+            "path": "comments",
+            "score_mode": "max", 
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      "comments.name": "earth"
+                    }
+                  },
+                  {
+                    "match": {
+                      "comments.size": 2
+                    }
+                  }
+                ]
+              }
+            }
+   }      
+  }
+      }'
