@@ -70,7 +70,7 @@ curl -H 'Content-Type: appliaction/json' -XPUT "http://localhost:9200/universe/"
 }'
 
 curl -XPOST "http://localhost:9200/universe/planets/1" -H 'content-Type: application/json' -d'
-{1
+{
    "mission": "accomplish",
    "comments": [
       {
