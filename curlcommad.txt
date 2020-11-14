@@ -52,7 +52,7 @@ curl -XGET 'localhost:9200/_search?pretty' -H 'Content-Type: application/json' -
 }'
 
 
-curl -XPUT "http://localhost:9200/universe/" -d'
+curl -H 'Content-Type: appliaction/json' -XPUT "http://localhost:9200/universe/" -d'
 {
   "mappings": {
     "planets": {
