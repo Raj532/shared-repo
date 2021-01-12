@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetDataResponse xmlns="http://springboot.com/course"
+	xsi:schemaLocation="http://springboot.com/course RR.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Eligible>true</Eligible>
+</GetDataResponse>

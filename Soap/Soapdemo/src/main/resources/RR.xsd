@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://springboot.com/course"
+	xmlns:tns="http://springboot.com/course" elementFormDefault="qualified">
+	<xsd:element name="GetDataRequest">    
+        <xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="name" type="xsd:string"/>
+				<xsd:element name="age" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<xsd:element name="GetDataResponse">
+		
+        
+        <xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Eligible" type="xsd:boolean"/>
+			</xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+</xsd:schema>

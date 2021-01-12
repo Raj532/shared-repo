@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetDataRequest xmlns="http://springboot.com/course"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://springboot.com/course RR.xsd">
+	<name>raju</name>
+	<age>23</age>
+</GetDataRequest>
